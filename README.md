@@ -1,13 +1,18 @@
 # Comparative Analysis of CNN, RNN and HAN for Text Classification with GloVe Data Model
-Capstone Project as part of the course CSC591: Algorithms for Data-Guided Business Intelligence
 
-**Team Members:**
+It’s a NLP Problem,the goal of our project is to classify categories of news based on the content of news articles from the BBC website using CNN, RNN and HAN models on two datasets that the former dataset have 2225 news, 5 categories and the latter dataset have 18846 news, 20 categories.
 
-- Rachit Shah (rshah25)
+#Set hyperparameters, such as embedding dimensions of glove model, trainable parameter of  embedding layer, bidirectional LSTM or simple LSTM
 
-- Sourabh Sandanshi (ssandan)
+#Preprocess the news articles, including removing punctuation ,stopwords, lemmatization,removing outliers in terms of news length and the number of sentences and set the corresponding parameters
 
-[You can find the screencast of the presentation here.](https://drive.google.com/file/d/1PzghKuV0vGEa602jNGYQil0UhcRVTn_q/view?usp=sharing)
+#Tokenize the data using word-index which is fit on the train data,then generate 2D input data (article, word) for CNN and RNN algorithms,and then generate 3D input data (article, sentence, word) for HAN algorithm
+
+#Use set hyperparameters to build the model architecture and use checkpointing, early stopping to train model, and then compare the test accuracy and validation loss of these three models
+
+#Utilized:Python,Pandas,Numpy,Seaborn,Matplolib,NLP,DNN,CNN,RNN,HAN,LSTM,GPU,Text Classification,Hyperparameters Tuning
+
+
 
 ## How to Run
 You can run the IPython Notebooks in the folders "Dataset - 1" and "Dataset -2" by either downloading on your local machine or using the "Open in Colab" link to run the notebooks on Google Colab. To run the notebooks you will need the [dataset zip file](http://mlg.ucd.ie/datasets/bbc.html), the [glove embedding zip file](http://nlp.stanford.edu/data/glove.6B.zip) and the model weights too if you want to replicate our results. You can find all these files in the [Google Drive folder](https://drive.google.com/drive/folders/15A2b8uNEfak_1Gfh-c85dTtOHJrfrk7h?usp=sharing). Add all the files in this link to your google drive (root folder) in order to run the notebooks.
